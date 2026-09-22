@@ -33,6 +33,7 @@ import { useFormContext } from "./FormContext";
 import { SaveAndExitButton } from "../SaveAndExitButton";
 import { getPageGate, PageGateName } from "../../../utilities/pageGates";
 import { PageGateModal } from "../../common/PageGateModal";
+import { LifeCycleState } from "../../../models/LifeCycleState";
 
 export type FieldType =
   | "text"
@@ -394,7 +395,9 @@ export default function FormBuilder({
       <Container>
         <Row>
           {/* TODO: remove canEditStatusLtft after LTFT routes are refactored */}
-          {(canEditStatusLtft || location.state?.fieldName) && (
+          {(canEditStatusLtft ||
+            location.state?.fieldName ||
+            formData.lifecycleState === LifeCycleState.Unsubmitted) && (
             <Col width="one-half">
               <Button
                 onClick={(e: { preventDefault: () => void }) =>

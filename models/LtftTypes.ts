@@ -93,6 +93,7 @@ export type LtftObjNew = {
   // PM stuff
   pmId: string;
   pmName: string;
+  pmNumber: string;
   pmStartDate: Date | string;
   pmEndDate: Date | string;
   designatedBodyCode: string;
@@ -177,6 +178,7 @@ export type LtftDto = {
   programmeMembership: {
     id: string;
     name: string;
+    programmeNumber: string;
     startDate: Date | string;
     endDate?: Date | string;
     wte: number;

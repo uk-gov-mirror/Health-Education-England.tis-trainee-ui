@@ -32,18 +32,20 @@ export function PageGateModal({
         </WarningCallout.Heading>
         <p data-cy="pageGateText">{gate.warningText}</p>
       </WarningCallout>
-      <Button type="button" data-cy="gateProceedBtn" onClick={onProceed}>
-        {gate.proceedBtnText}
-      </Button>
-      <Button
-        type="button"
-        secondary
-        data-cy="gateSkipBtn"
-        aria-describedby="gateSkipHint"
-        onClick={onSkip}
-      >
-        {gate.skipBtnText}
-      </Button>
+      <div className="nhsuk-button-group">
+        <Button type="button" data-cy="gateProceedBtn" onClick={onProceed}>
+          {gate.proceedBtnText}
+        </Button>
+        <Button
+          type="button"
+          secondary
+          data-cy="gateSkipBtn"
+          aria-describedby="gateSkipHint"
+          onClick={onSkip}
+        >
+          {gate.skipBtnText}
+        </Button>
+      </div>
       <p className="nhsuk-hint" id="gateSkipHint" data-cy="gateSkipHint">
         {gate.skipHint}
       </p>

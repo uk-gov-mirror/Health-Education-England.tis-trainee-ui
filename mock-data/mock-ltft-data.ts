@@ -173,6 +173,7 @@ export const mockLtftNewFormObj: LtftObjNew = {
   pmEndDate: "",
   pmId: "",
   pmName: "",
+  pmNumber: "",
   pmStartDate: "",
   reasonsOtherDetail: null,
   reasonsSelected: null,
@@ -214,6 +215,7 @@ export const mockLtftDraftUpdatedPmFormObjNoSave: LtftObjNew = {
   pmEndDate: "2028-01-01",
   pmId: "7ab1aae3-83c2-4bb6-b1f3-99146e79b362",
   pmName: "Cardiology",
+  pmNumber: "EOE8945",
   pmStartDate: "2025-07-01"
 };
 
@@ -251,6 +253,7 @@ export const mockLtftDraftUpdatedPmFormDtoFirstSavePayload: LtftDto = {
   programmeMembership: {
     id: "7ab1aae3-83c2-4bb6-b1f3-99146e79b362",
     name: "Cardiology",
+    programmeNumber: "EOE8945",
     startDate: "2025-07-01",
     endDate: "2028-01-01",
     wte: 0,
@@ -299,6 +302,7 @@ export const mockLtftDraftFirstSuccessSaveResponseDto: LtftDto = {
   programmeMembership: {
     id: "7ab1aae3-83c2-4bb6-b1f3-99146e79b362",
     name: "Cardiology",
+    programmeNumber: "EOE8945",
     designatedBodyCode: "",
     managingDeanery: "East of England",
     startDate: "2025-07-01",
@@ -396,6 +400,7 @@ export const mockLtftFormObjAfterFirstSave: LtftObjNew = {
   pmEndDate: "2028-01-01",
   pmId: "7ab1aae3-83c2-4bb6-b1f3-99146e79b362",
   pmName: "Cardiology",
+  pmNumber: "EOE8945",
   pmStartDate: "2025-07-01",
   reasonsOtherDetail: "",
   reasonsSelected: [],
@@ -439,6 +444,7 @@ export const mockLtftSubmittedFormObj: LtftObjNew = {
   name: "my submitted ltft application",
   pmId: "7ab1aae3-83c2-4bb6-b1f3-99146e79b362",
   pmName: "Cardiology",
+  pmNumber: "EOE8945",
   pmStartDate: pmStartDate,
   pmEndDate: pmEndDate,
   designatedBodyCode: "",

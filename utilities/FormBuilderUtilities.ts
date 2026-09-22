@@ -137,6 +137,7 @@ export function prepLtftFormData(
   if (linkedProgramme) {
     const {
       programmeName,
+      programmeNumber,
       startDate,
       endDate,
       designatedBodyCode,
@@ -146,6 +147,7 @@ export function prepLtftFormData(
     const preppedData = {
       ...formData,
       pmName: programmeName ?? "",
+      pmNumber: programmeNumber ?? "",
       pmStartDate: startDate ?? "",
       pmEndDate: endDate ?? "",
       designatedBodyCode: designatedBodyCode ?? "",

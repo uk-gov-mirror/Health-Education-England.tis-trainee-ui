@@ -8,9 +8,11 @@ export default function Document() {
         <meta name="theme-color" content="#000000" />
         <meta
           name="description"
-          content="Health Education England TIS Self-Service web application"
+          content="NHS England TIS Self-Service web application"
         />
-        <meta name="robots" content="noindex,nofollow" />
+        {process.env.NEXT_PUBLIC_ENVIRONMENT_NAME !== "production" && (
+          <meta name="robots" content="noindex,nofollow" />
+        )}
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <body className="nhsuk-frontend-supported">

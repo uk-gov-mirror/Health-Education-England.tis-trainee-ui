@@ -44,6 +44,10 @@ describe("mapLtftObjToDto", () => {
   it("should map LtftObj to DTO correctly", () => {
     const mappedDto = mapLtftObjToDto(mockLtftDraftUpdatedPmFormObjNoSave);
     expect(mappedDto).toEqual(mockLtftDraftUpdatedPmFormDtoFirstSavePayload);
+    expect(mappedDto.programmeMembership).toMatchObject({
+      name: "Cardiology",
+      programmeNumber: "EOE8945"
+    });
   });
 
   it("should map empty altStartDate to null", () => {
@@ -100,6 +104,10 @@ describe("mapDtoToLtftObj", () => {
   it("should map DTO to LtftObj correctly", () => {
     const ltftObj = mapLtftDtoToObj(mockLtftDraftFirstSuccessSaveResponseDto);
     expect(ltftObj).toEqual(mockLtftFormObjAfterFirstSave);
+    expect(ltftObj).toMatchObject({
+      pmName: "Cardiology",
+      pmNumber: "EOE8945"
+    });
   });
 
   it("maps exceptional true back to canGiveCompliantStartDate false (No path)", () => {

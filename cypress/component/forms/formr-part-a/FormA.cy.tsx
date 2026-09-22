@@ -127,6 +127,11 @@ describe("FormR Part A - UNSUBMITTED form with stale prog linkage", () => {
     cy.get('[data-cy="pageGateWarning"]').should("exist");
   });
 
+  it("should still display 'shortcut back to Review & submit' btn if the 'stale prog linkage' modal/gate is actioned", () => {
+    cy.get('[data-cy="gateSkipBtn"]').click();
+    cy.get('[data-cy="BtnShortcutToConfirm"]').should("be.visible");
+  });
+
   it("clears the programme linkage when 'proceed' is chosen", () => {
     cy.get('[data-cy="gateProceedBtn"]').click();
     cy.get('[data-cy="pageGateWarning"]').should("not.exist");
